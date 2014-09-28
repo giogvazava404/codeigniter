@@ -18,4 +18,12 @@ class Site extends CI_Controller {
 		$data["title"] = "About";		
 		$this->load->view("view_about", $data);
 	}
+	
+	public function getValues()
+	{
+		$this->load->model("get_db");
+		$data["title"] = "database outlook";
+		$data["db"] = $this->get_db->getAll();
+		$this->load->view("view_datax",$data);
+	}
 }
