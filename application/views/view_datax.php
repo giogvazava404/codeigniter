@@ -10,9 +10,9 @@
 <a href="site/about">About us</a>
 <br />
 <?php
-echo "<pre>";
-print_r($db);
-echo "</pre>";
+foreach($db as $d){
+echo '<p>'.$d->name.'</p>';
+}
 ?>
 </body>
 </html>
