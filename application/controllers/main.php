@@ -4,13 +4,16 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		//$this->load->view('welcome_message');
-		//$this->addStaff( );
 		$this->home();
 	}
 	
 	public function home(){
-		$data["title"] = "Home";		
+		
+		// navigation model
+		$this->load->model("nav");
+		$data["nav"] = $this->nav->getAllNav();
+		$data["title"] = "test";
+		// view
 		$this->load->view("view_home", $data);
 	}
 	
