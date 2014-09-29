@@ -1,7 +1,7 @@
 <!-- Heading Row -->
         <div class="row">
             <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
+                <iframe src="plugins/Slides/examples/basic-slide" style="margin:0; padding:0; border:0; width:780px; height:297px; overflow-y: hidden;" frameborder="0"></iframe>
             </div>
             <!-- /.col-md-8 -->
             <div class="col-md-4">
