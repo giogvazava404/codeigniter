@@ -13,10 +13,13 @@ class Main extends CI_Controller {
 		// navigation model
 		$this->load->model("nav");
 		$data["nav"] = $this->nav->getAllNav();
-		$data["title"] = "test";
+		$titl = $this->nav->title();
+		$data["title"] = $titl[0]->{"name"};
+		
 		// load main_text
 		$this->load->model("main_text");
 		$main_text = $this->main_text->get_text();
+		// commerce
 		$g_f_c = $this->main_text->g_f_c();
 		
 		$data["main_text"] = $main_text[0]->{"text"};

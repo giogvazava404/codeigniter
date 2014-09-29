@@ -1,5 +1,5 @@
 <?php
-class Services extends CI_Model{
+class Services_all extends CI_Model{
 
 	public function getAllServices($limit)
 	{
