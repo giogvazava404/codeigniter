@@ -280,7 +280,6 @@
 				{
 					show_404("{$class}/{$method}");
 				}
-
 				include_once(APPPATH.'controllers/'.$class.'.php');
 			}
 		}
@@ -342,7 +341,6 @@
 					{
 						show_404("{$class}/{$method}");
 					}
-
 					include_once(APPPATH.'controllers/'.$class.'.php');
 					unset($CI);
 					$CI = new $class();
