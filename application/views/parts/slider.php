@@ -7,7 +7,7 @@
             <div class="col-md-4">
                 <h1><?php echo $main_title; ?></h1>
                 <p><?php echo $main_text; ?></p>
-                <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
+                <a class="btn btn-primary btn-lg" href="<?php echo $main_url; ?>">სრულად</a>
             </div>
             <!-- /.col-md-4 -->
         </div>

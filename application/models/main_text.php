@@ -3,7 +3,7 @@ class main_text extends CI_Model{
 
 	public function get_text()
 	{
-		$query = $this->db->query("SELECT `title`,`text` FROM `main_text` WHERE `id`=1");
+		$query = $this->db->query("SELECT `name`,`text`,`url` FROM `navigation` WHERE `id`=1");
 		return $query->result();
 	}
 	

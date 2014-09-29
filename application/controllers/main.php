@@ -23,7 +23,8 @@ class Main extends CI_Controller {
 		$g_f_c = $this->main_text->g_f_c();
 		
 		$data["main_text"] = $main_text[0]->{"text"};
-		$data["main_title"] = $main_text[0]->{"title"};
+		$data["main_title"] = $main_text[0]->{"name"};
+		$data["main_url"] = $main_text[0]->{"url"};
 		$data["g_f_c"] = $g_f_c[0]->{"text"};
 		
 		// load services
