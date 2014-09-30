@@ -16,6 +16,11 @@ class About extends CI_Controller {
 		$tit = $this->nav->title();
 		$data["title"] = $tit[0]->{'name'};
 		
+		// load main_text
+		$this->load->model("main_text");
+		$copyright = $this->main_text->copyright();
+		$data["copyright"] = $copyright[0]->{"text"};
+		
 		//page type
 		$page_type = $tit[0]->{'type'};
 		

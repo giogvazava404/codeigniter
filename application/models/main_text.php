@@ -13,4 +13,10 @@ class main_text extends CI_Model{
 		return $query->result();
 	}
 	
+	public function copyright()
+	{
+		$query = $this->db->query("SELECT `text` FROM `main_text` WHERE `id`=3");
+		return $query->result();
+	}
+	
 }

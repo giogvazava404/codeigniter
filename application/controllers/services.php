@@ -14,6 +14,12 @@ class Services extends CI_Controller {
 		$data["nav"] = $this->nav->getAllNav();
 		
 		$url = explode("/",$_SERVER['REQUEST_URI']);
+		
+		// load main_text
+		$this->load->model("main_text");
+		$copyright = $this->main_text->copyright();
+		$data["copyright"] = $copyright[0]->{"text"};
+		
 		if(!empty($url[4]))
 		{ 
 			$this->load->model("one_servise");

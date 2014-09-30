@@ -8,10 +8,20 @@ class Contact extends CI_Controller {
 	}
 	
 	public function getContact(){
-		
+		if(isset($_POST["namelname"],$_POST['email'],$_POST['text']))
+		{
+			$this->load->model("mailer");
+			$data["mailer_output"] = $this->mailer->sendEmail("giorgigvazava87@gmail.com", $_POST['email'], "კონტაქტი - ".$_POST["namelname"],$_POST["text"]);
+		}
 		// navigation model
 		$this->load->model("nav");
 		$data["nav"] = $this->nav->getAllNav();
+		
+		// load main_text
+		$this->load->model("main_text");
+		$copyright = $this->main_text->copyright();
+		$data["copyright"] = $copyright[0]->{"text"};
+		
 		//get tittle
 		$tit = $this->nav->title();
 		$data["title"] = $tit[0]->{'name'};
