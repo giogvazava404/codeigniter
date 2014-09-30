@@ -29,9 +29,14 @@ class gotoController extends CI_Controller {
 		$data["g_f_c"] = $g_f_c[0]->{"text"};
 		$data["copyright"] = $copyright[0]->{"text"};
 		
-		// load services
-		$this->load->model("services");
-		$data["service"] = $this->services->getAllServices(3);
+		if(!class_exists ("services"))
+		{
+			// load services
+			$this->load->model("services");
+			$data["service"] = $this->services->getAllServices(3);
+		}else{
+			$data["service"] = "";
+		}
 		// view
 		$this->load->view("view_home", $data);
 	}

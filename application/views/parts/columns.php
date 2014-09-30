@@ -18,6 +18,7 @@ else
 <!-- Content Row -->
 <div class="row">
 	<?php
+	if(is_array($service)){
 	foreach($service as $serv)
 	{
 	?>
@@ -27,7 +28,12 @@ else
 			<a class="btn btn-default" href="services/views/<?php echo $serv->{"id"}; ?>">სრულად</a>
 		</div>
   <?php
-  }
+	}
+	}
+	else
+	{
+		echo '<meta http-equiv="refresh" content="0; url=main" />';
+	}
   ?>
 	<!-- /.col-md-4 -->
 </div>
