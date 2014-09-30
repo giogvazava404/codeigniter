@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "main";
-$route['404_override'] = '';
+$route['404_override'] = 'gotoController';
 
 
 /* End of file routes.php */
